@@ -1,0 +1,15 @@
+{
+  "name": "Umana Apps - Biblioteca",
+  "short_name": "Umana Apps",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#18181b",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/7c3aed/ffffff?text=UA",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
