@@ -1,4 +1,4 @@
-const CACHE_NAME = 'davidios-apps-v3';
+const CACHE_NAME = 'davidios-apps-v4';
 const APP_SHELL = [
     './',
     './index.html',

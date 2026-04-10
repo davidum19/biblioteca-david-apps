@@ -530,10 +530,18 @@ main {
     border-radius: 999px;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    width: 100%;
 }
 
 .category-tabs::-webkit-scrollbar {
     display: none;
+}
+
+.category-tabs::after {
+    content: "";
+    flex: 0 0 18px;
 }
 
 .category-tab {
@@ -663,6 +671,7 @@ main {
     color: #ffffff;
     background: linear-gradient(135deg, #6b5cff 0%, #3d7dff 100%);
     box-shadow: 0 14px 30px rgba(107, 92, 255, 0.22);
+    white-space: nowrap;
 }
 
 .download-link.disabled {
