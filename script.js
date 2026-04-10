@@ -129,13 +129,8 @@ function renderApps() {
     filteredApps.forEach((app) => {
         const node = elements.appCardTemplate.content.firstElementChild.cloneNode(true);
         node.querySelector('.app-icon').textContent = app.icono || '📱';
-        node.querySelector('.app-version').textContent = `v${app.version || 'N/A'}`;
-        node.querySelector('.app-category').textContent = formatCategory(app.categoria);
         node.querySelector('.app-name').textContent = app.nombre;
-        node.querySelector('.app-description').textContent = app.descripcion;
-        node.querySelector('.app-size').textContent = app.tamano || 'Tamano por definir';
-        node.querySelector('.app-signer').textContent = app.firma || 'Firma pendiente';
-        node.querySelector('.app-status').textContent = app.estado || 'Disponible pronto';
+        node.querySelector('.app-version-line').textContent = `Version ${app.version || 'N/A'}`;
 
         const link = node.querySelector('.download-link');
         link.href = app.enlace || '#';
@@ -145,9 +140,6 @@ function renderApps() {
             link.textContent = 'Proximamente';
             link.classList.add('disabled');
             link.addEventListener('click', (event) => event.preventDefault());
-            node.querySelector('.app-status').classList.add('pending');
-        } else {
-            node.querySelector('.app-status').classList.add('ready');
         }
 
         fragment.appendChild(node);
