@@ -10,7 +10,7 @@ const categoryMeta = {
     emuladores: { label: 'Emuladores', accent: 'Retro y consolas' },
     juegos: { label: 'Juegos', accent: 'Accion, casual y premium' },
     tweaks: { label: 'Tweaks & Mods', accent: 'Funciones extra y ajustes' },
-    streaming: { label: 'Streaming', accent: 'Video, musica y series' },
+    streaming: { label: 'Redes Sociales', accent: 'Instagram, WhatsApp y mas' },
     utilidades: { label: 'Utilidades', accent: 'Herramientas para iPhone' }
 };
 

@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "categoria": "streaming",
+    "categoria": "top",
     "nombre": "Netflix Ultra HD",
     "icono": "📽️",
     "descripcion": "Build experimental para contenido de video con perfil visual premium.",
@@ -94,5 +94,50 @@
     "firma": "Pendiente de firma",
     "estado": "Disponible pronto",
     "enlace": "#"
+  },
+  {
+    "id": 9,
+    "categoria": "streaming",
+    "nombre": "Instagram++",
+    "icono": "📱",
+    "version": "424.1.0",
+    "tamano": "242.18 MB",
+    "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/10-04-2026/Instagram_424.1.0_Premium_%40thisismanpreets_apptesters.org.ipa"
+  },
+  {
+    "id": 10,
+    "categoria": "streaming",
+    "nombre": "WhatsApp ++",
+    "icono": "📱",
+    "version": "26.10.73",
+    "tamano": "130.71 MB",
+    "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/19-03-2026/WhatsApp_26.10.73_Premium_%40thisismanpreets_apptesters.org.ipa"
+  },
+  {
+    "id": 11,
+    "categoria": "streaming",
+    "nombre": "YouTube OLED",
+    "icono": "📱",
+    "version": "21.02.3",
+    "tamano": "121.83 MB",
+    "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/13-01-2026/YouTubeOLED_21.02.3_Premium_%40thisismanpreets_apptesters.org.ipa"
+  },
+  {
+    "id": 12,
+    "categoria": "streaming",
+    "nombre": "Tik Tok ++",
+    "icono": "📱",
+    "version": "44.6.0",
+    "tamano": "395.59 MB",
+    "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/31-03-2026/TikTok_44.5.0_Premium_%40thisismanpreets_apptesters.org.ipa"
+  },
+  {
+    "id": 13,
+    "categoria": "streaming",
+    "nombre": "Facebook ++",
+    "icono": "📱",
+    "version": "555.0.0",
+    "tamano": "170.64 MB",
+    "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/01-04-2026/Facebook_555.0.0_Premium_%40thisismanpreets_apptesters.org.ipa"
   }
 ]
