@@ -226,6 +226,14 @@ main { max-width: 1220px; margin: 0 auto; }
     box-shadow: 0 14px 34px rgba(107,92,255,0.08), inset 0 1px 0 rgba(255,255,255,0.65);
 }
 
+.showcase-logo {
+    object-fit: contain;
+    padding: 22px;
+    background:
+        radial-gradient(circle at center, rgba(107,92,255,0.12), transparent 58%),
+        rgba(255,255,255,0.46);
+}
+
 .install-steps strong, .app-name { display: block; font-size: 1.02rem; }
 
 .install-flow-card { margin-top: 22px; }
@@ -275,6 +283,29 @@ main { max-width: 1220px; margin: 0 auto; }
     width: 100%;
     max-width: 100%;
     padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+
+.library-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+}
+
+.library-toolbar-copy {
+    min-width: 0;
+}
+
+.library-toolbar-copy .panel-label {
+    margin-bottom: 4px;
+}
+
+.library-toolbar-text {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.35;
 }
 
 /* ── Tabs sticky ───────────────────────────────────────────── */
@@ -477,6 +508,7 @@ code { font-family: "Space Grotesk", sans-serif; }
     .intro-grid { grid-template-columns: 1fr; }
     .hero-main h1 { max-width: none; }
     .showcase-shot { min-height: 300px; }
+    .library-toolbar { flex-direction: column; align-items: stretch; }
 }
 
 @media (max-width: 640px) {
@@ -493,6 +525,7 @@ code { font-family: "Space Grotesk", sans-serif; }
     .hero-actions { flex-direction: column; }
     .secondary-action { width: 100%; text-align: center; }
     .header-note { justify-content: center; }
+    .library-toolbar-text { font-size: 0.85rem; }
 
     .install-steps li { grid-template-columns: 60px 1fr; align-items: start; }
 
@@ -538,4 +571,96 @@ code { font-family: "Space Grotesk", sans-serif; }
         font-size: 1rem; color: var(--muted);
         text-align: center; padding: 32px;
     }
+}
+
+.tasks-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tasks-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 15, 30, 0.55);
+    backdrop-filter: blur(8px);
+}
+
+.tasks-container {
+    position: relative;
+    width: 92%;
+    max-width: 380px;
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    z-index: 1;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tasks-header h3 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.tasks-header button {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.tasks-subtitle {
+    margin: 10px 0 18px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-btn {
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.6);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.task-btn.done {
+    background: rgba(107,92,255,0.15);
+    border-color: rgba(107,92,255,0.3);
+}
+
+.unlock-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: none;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6b5cff, #3d7dff);
+    color: white;
+    opacity: 0.5;
+}
+
+.unlock-btn:enabled {
+    opacity: 1;
+}
+.task-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }

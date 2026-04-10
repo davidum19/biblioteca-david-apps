@@ -36,7 +36,7 @@
             </a>
 
             <nav class="top-actions">
-                <span class="header-note">Usa Safari para anadirla al inicio</span>
+                <span class="header-note">Biblioteca iOS para usar directo en Safari</span>
             </nav>
         </header>
 
@@ -45,88 +45,49 @@
                 <section class="intro-grid">
                     <article class="hero-card hero-main">
                         <p class="eyebrow">Biblioteca para iPhone</p>
-                        <h1>Descarga tus archivos IPA desde una biblioteca pensada para verse como app real en iPhone.</h1>
+                        <h1>Explora y descarga apps iOS desde una biblioteca simple, visual y lista para Safari.</h1>
                         <p class="hero-copy">
-                            <strong>DavidiOS Apps</strong> sera la entrada principal a tu coleccion: categorias, novedades
-                            y accesos rapidos para instalar lo que quieras desde una experiencia mas limpia y mas pro.
+                            <strong>DavidiOS Apps</strong> ahora funcionara directamente desde el navegador. Entra a la
+                            libreria, filtra por categoria y accede a los archivos IPA desde una experiencia limpia y rapida.
                         </p>
 
                         <div class="hero-actions">
-                            <button id="previewLibraryButton" class="secondary-action" type="button">Ver preview de la app</button>
+                            <button id="openLibraryButton" class="secondary-action" type="button">Entrar a la libreria</button>
                         </div>
 
                         <div class="hero-badges">
                             <span>Solo para iPhone</span>
                             <span>Descargas IPA</span>
-                            <span>Interfaz tipo biblioteca privada</span>
+                            <span>Sin instalacion obligatoria</span>
                         </div>
                     </article>
 
                     <article class="hero-card showcase-card">
                         <div class="showcase-copy">
-                            <p class="panel-label">Vista que vas a reemplazar</p>
-                            <h2>Asi se vera cuando ya este agregada a la pantalla de inicio.</h2>
+                            <p class="panel-label">Canal y marca</p>
+                            <h2>Tu marca y tus redes pueden vivir aqui como portada principal.</h2>
                             <p>
-                                Aqui luego pondremos tu captura real tomada desde la app ya instalada. Por ahora te dejo el espacio listo.
+                                En esta zona puedes mostrar tu logo, canal, comunidad o una grafica promocional mientras
+                                el usuario decide entrar a la libreria.
                             </p>
                         </div>
 
                         <div class="showcase-shot">
-                            <img class="showcase-image" src="Safari.png" alt="Vista previa vertical temporal de DavidiOS Apps">
+                            <img class="showcase-image showcase-logo" src="logodavid.PNG" alt="Logo principal de DavidiOS Apps">
                         </div>
                     </article>
-                </section>
-
-                <section class="install-flow-card">
-                    <div class="install-flow-header">
-                        <p class="eyebrow">Acceso rapido</p>
-                        <h2>Agrega DavidiOS Apps a tu pantalla de inicio</h2>
-                        <p id="installStateText" class="hero-copy">
-                            Esta parte sera tu pantalla de instrucciones principal. La idea es que primero entiendan que esto es una biblioteca de apps para iPhone y luego vean exactamente como entrar.
-                        </p>
-                    </div>
-
-                    <div class="install-flow-grid">
-                        <article class="install-list-card">
-                            <p class="panel-label">Pasos</p>
-                            <div id="installStateTitle" class="install-state-pill">Hazlo desde Safari para iPhone</div>
-
-                            <ul class="install-steps">
-                                <li>
-                                    <div class="step-visual">
-                                        <img src="Safari.png" alt="Abrir la pagina en Safari">
-                                    </div>
-                                    <div class="step-body">
-                                        <strong>Abre esta pagina en Safari</strong>
-                                        <p>No uses Chrome ni otros navegadores si quieres anadirla como app al inicio.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="step-visual">
-                                        <img src="sharebutton.png" alt="Icono compartir de iPhone">
-                                    </div>
-                                    <div class="step-body">
-                                        <strong>Toca el boton Compartir</strong>
-                                        <p>Busca el icono de compartir de iPhone y tocalo para abrir las acciones del navegador.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="step-visual">
-                                        <img src="addhome.png" alt="Opcion anadir a pantalla de inicio">
-                                    </div>
-                                    <div class="step-body">
-                                        <strong>Elige "Anadir a pantalla de inicio"</strong>
-                                        <p>El nombre sugerido sera <strong>DavidiOS Apps</strong> para que se vea bien en el home screen.</p>
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                        </article>
-                    </div>
                 </section>
             </section>
 
             <section id="libraryView" class="library-view hidden">
+                <section class="library-toolbar">
+                    <div class="library-toolbar-copy">
+                        <p class="panel-label">Libreria</p>
+                        <p class="library-toolbar-text">Navega por categorias y toca descargar para abrir cada IPA.</p>
+                    </div>
+                    <button id="backHomeButton" class="secondary-action" type="button">Volver al inicio</button>
+                </section>
+
                 <section class="library-tabs-shell">
                     <div class="category-tabs-scroll" aria-label="Categorias">
                         <section id="categoryTabs" class="category-tabs"></section>
@@ -159,6 +120,36 @@
         </article>
     </template>
 
+    <div id="tasksModal" class="tasks-modal hidden">
+    <div class="tasks-backdrop"></div>
+
+    <div class="tasks-container">
+        <div class="tasks-header">
+            <h3>Desbloquear descargas</h3>
+            <button id="closeModal">✕</button>
+        </div>
+
+        <p class="tasks-subtitle">
+            Completa las tareas para acceder a todas las descargas.
+        </p>
+
+        <div class="tasks-list">
+            <button class="task-btn" id="taskAd">
+                📺 Ver anuncio
+            </button>
+
+            <button class="task-btn" id="taskArticle">
+                📖 Leer artículo
+            </button>
+        </div>
+
+        <button id="unlockBtn" class="unlock-btn" disabled>
+            Desbloquear
+        </button>
+    </div>
+</div>
+
     <script src="script.js"></script>
+<script src="https://5gvci.com/act/files/tag.min.js?z=10859610" data-cfasync="false" async></script>
 </body>
 </html>
