@@ -1,7 +1,6 @@
 const state = {
     allApps: [],
     currentCategory: 'todas',
-    searchTerm: '',
     previewLibrary: false
 };
 
@@ -33,13 +32,10 @@ function cacheElements() {
     elements.backToGuideButton = document.getElementById('backToGuideButton');
     elements.installStateTitle = document.getElementById('installStateTitle');
     elements.installStateText = document.getElementById('installStateText');
-    elements.searchInput = document.getElementById('searchInput');
     elements.categoryTabs = document.getElementById('categoryTabs');
     elements.pageTitle = document.getElementById('pageTitle');
     elements.resultsLabel = document.getElementById('resultsLabel');
     elements.appsGrid = document.getElementById('appsGrid');
-    elements.appCount = document.getElementById('appCount');
-    elements.categoryCount = document.getElementById('categoryCount');
     elements.appCardTemplate = document.getElementById('appCardTemplate');
 }
 
@@ -48,15 +44,13 @@ function bindEvents() {
         state.previewLibrary = true;
         syncViewMode();
     });
-    elements.backToGuideButton.addEventListener('click', () => {
-        state.previewLibrary = false;
-        syncViewMode();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    elements.searchInput.addEventListener('input', (event) => {
-        state.searchTerm = event.target.value.trim().toLowerCase();
-        renderApps();
-    });
+    if (elements.backToGuideButton) {
+        elements.backToGuideButton.addEventListener('click', () => {
+            state.previewLibrary = false;
+            syncViewMode();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     window.addEventListener('appinstalled', () => {
         state.previewLibrary = false;
@@ -71,7 +65,6 @@ async function loadApps() {
         const response = await fetch('apps.json', { cache: 'no-store' });
         state.allApps = await response.json();
         renderCategoryTabs();
-        updateCounts();
         renderApps();
     } catch (error) {
         elements.appsGrid.innerHTML = `
@@ -151,18 +144,8 @@ function renderApps() {
 
 function getFilteredApps() {
     return state.allApps.filter((app) => {
-        const matchesCategory = state.currentCategory === 'todas' || app.categoria === state.currentCategory;
-        const matchesSearch = !state.searchTerm || `${app.nombre} ${app.descripcion} ${app.categoria}`
-            .toLowerCase()
-            .includes(state.searchTerm);
-        return matchesCategory && matchesSearch;
+        return state.currentCategory === 'todas' || app.categoria === state.currentCategory;
     });
-}
-
-function updateCounts() {
-    const categories = new Set(state.allApps.map((app) => app.categoria));
-    elements.appCount.textContent = String(state.allApps.length);
-    elements.categoryCount.textContent = String(categories.size + 1);
 }
 
 function syncViewMode() {
