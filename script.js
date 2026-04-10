@@ -152,6 +152,7 @@ function syncViewMode() {
     const showLibrary = isStandaloneMode() || state.previewLibrary;
     elements.landingView.classList.toggle('hidden', showLibrary);
     elements.libraryView.classList.toggle('hidden', !showLibrary);
+    document.body.classList.toggle('library-mode', showLibrary);
 }
 
 function isStandaloneMode() {
