@@ -1,10 +1,98 @@
 [
-  {"id":1,"categoria":"top","nombre":"Delta Emulator","icono":"🎮","descripcion":"El mejor emulador Nintendo, GB, GBA y más","version":"1.3","enlace":"https://ejemplo.com/delta.ipa"},
-  {"id":2,"categoria":"top","nombre":"YouTube++","icono":"📺","descripcion":"YouTube sin anuncios y con descargas","version":"19.45","enlace":"#"},
-  {"id":3,"categoria":"emuladores","nombre":"GBA4iOS","icono":"🐸","descripcion":"Emulador Game Boy Advance","version":"2.1","enlace":"#"},
-  {"id":4,"categoria":"juegos","nombre":"GTA San Andreas","icono":"🚗","descripcion":"Versión completa para iOS","version":"1.0","enlace":"#"},
-  {"id":5,"categoria":"tweaks","nombre":"Spotify Premium++","icono":"🎵","descripcion":"Spotify sin anuncios y con descargas","version":"9.1","enlace":"#"},
-  {"id":6,"categoria":"streaming","nombre":"Netflix Ultra HD","icono":"📽️","descripcion":"Calidad Ultra con cuenta compartida","version":"8.9","enlace":"#"},
-  {"id":7,"categoria":"utilidades","nombre":"Esign","icono":"📦","descripcion":"Firmador de IPA más rápido","version":"1.2","enlace":"#"},
-  {"id":8,"categoria":"emuladores","nombre":"PPSSPP","icono":"🕹️","descripcion":"Emulador PSP","version":"1.18","enlace":"#"}
+  {
+    "id": 1,
+    "categoria": "top",
+    "nombre": "Delta Emulator",
+    "icono": "🎮",
+    "descripcion": "Emulador todo en uno para Nintendo, Game Boy, DS y mas.",
+    "version": "1.3",
+    "tamano": "92 MB",
+    "firma": "Lista para instalar",
+    "estado": "Actualizada hoy",
+    "enlace": "https://ejemplo.com/delta.ipa"
+  },
+  {
+    "id": 2,
+    "categoria": "top",
+    "nombre": "YouTube++",
+    "icono": "📺",
+    "descripcion": "Reproductor mejorado con menos interrupciones y opciones extra.",
+    "version": "19.45",
+    "tamano": "148 MB",
+    "firma": "Pendiente de firma",
+    "estado": "Subida en revision",
+    "enlace": "#"
+  },
+  {
+    "id": 3,
+    "categoria": "emuladores",
+    "nombre": "GBA4iOS",
+    "icono": "🐸",
+    "descripcion": "Emulador clasico para Game Boy Advance con guardado rapido.",
+    "version": "2.1",
+    "tamano": "44 MB",
+    "firma": "Pendiente de firma",
+    "estado": "Disponible pronto",
+    "enlace": "#"
+  },
+  {
+    "id": 4,
+    "categoria": "juegos",
+    "nombre": "GTA San Andreas",
+    "icono": "🚗",
+    "descripcion": "Version completa para iPhone con acceso directo desde tu biblioteca.",
+    "version": "1.0",
+    "tamano": "1.9 GB",
+    "firma": "Verificar compatibilidad",
+    "estado": "Paquete en prueba",
+    "enlace": "#"
+  },
+  {
+    "id": 5,
+    "categoria": "tweaks",
+    "nombre": "Spotify Premium++",
+    "icono": "🎵",
+    "descripcion": "Cliente modificado con experiencia extendida y descargas.",
+    "version": "9.1",
+    "tamano": "133 MB",
+    "firma": "Pendiente de firma",
+    "estado": "Disponible pronto",
+    "enlace": "#"
+  },
+  {
+    "id": 6,
+    "categoria": "streaming",
+    "nombre": "Netflix Ultra HD",
+    "icono": "📽️",
+    "descripcion": "Build experimental para contenido de video con perfil visual premium.",
+    "version": "8.9",
+    "tamano": "201 MB",
+    "firma": "En pruebas",
+    "estado": "Revision interna",
+    "enlace": "#"
+  },
+  {
+    "id": 7,
+    "categoria": "utilidades",
+    "nombre": "Esign",
+    "icono": "📦",
+    "descripcion": "Firmador de IPA ligero para mantener tus instalaciones organizadas.",
+    "version": "1.2",
+    "tamano": "57 MB",
+    "firma": "Herramienta recomendada",
+    "estado": "Actualizada hoy",
+    "enlace": "#"
+  },
+  {
+    "id": 8,
+    "categoria": "emuladores",
+    "nombre": "PPSSPP",
+    "icono": "🕹️",
+    "descripcion": "Emulador PSP optimizado para sesiones largas y mejor rendimiento.",
+    "version": "1.18",
+    "tamano": "69 MB",
+    "firma": "Pendiente de firma",
+    "estado": "Disponible pronto",
+    "enlace": "#"
+  }
 ]

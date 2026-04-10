@@ -2,61 +2,204 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Umana • Apps Gratis</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DavidiOS Apps</title>
+    <meta name="description" content="Biblioteca visual de apps para iPhone con categorias, novedades y guia de instalacion para Safari.">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DavidiOS Apps">
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="css/styles.css">
-    <meta name="theme-color" content="#7c3aed">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-zinc-950 text-white min-h-screen">
-    <!-- HEADER -->
-    <header class="border-b border-zinc-800 bg-zinc-900 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-400 rounded-2xl flex items-center justify-center text-2xl">🚀</div>
-                <h1 class="text-3xl font-bold tracking-tighter">Umana Apps</h1>
-            </div>
-            <input id="searchInput" 
-                   type="text" 
-                   placeholder="Buscar apps o juegos..." 
-                   class="bg-zinc-800 border border-zinc-700 focus:border-violet-500 rounded-3xl px-6 py-3 w-96 outline-none text-sm">
-            <button onclick="installPWA()" 
-                    class="bg-white text-zinc-900 px-6 py-2.5 rounded-3xl font-semibold text-sm flex items-center gap-2 hover:scale-105 transition">
-                <span>Añadir a inicio</span>
-            </button>
-        </div>
+<body>
+    <div class="page-shell">
+        <div class="ambient ambient-a"></div>
+        <div class="ambient ambient-b"></div>
+        <div class="ambient ambient-c"></div>
 
-        <!-- CATEGORÍAS -->
-        <div class="max-w-6xl mx-auto px-6 pb-4 flex gap-2 overflow-x-auto" id="categoryTabs"></div>
-    </header>
+        <header class="site-header">
+            <a class="brand" href="#top" aria-label="Inicio">
+                <span class="brand-mark">
+                    <img src="logodavid.PNG" alt="Logo DavidiOS Apps">
+                </span>
+                <span>
+                    <strong>DavidiOS Apps</strong>
+                    <small>Biblioteca visual para iPhone</small>
+                </span>
+            </a>
 
-    <main class="max-w-6xl mx-auto px-6 py-8">
-        <h2 id="pageTitle" class="text-4xl font-bold mb-8">Top Apps 🔥</h2>
-        
-        <div id="appsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div>
-    </main>
+            <nav class="top-actions">
+                <span class="header-note">Usa Safari para anadirla al inicio</span>
+            </nav>
+        </header>
 
-    <!-- OFFERWALL MODAL -->
-    <div id="offerModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[9999]">
-        <div class="bg-zinc-900 rounded-3xl max-w-lg w-full mx-4 p-8 text-center">
-            <h3 class="text-2xl font-bold mb-2">¡Desbloquea la biblioteca!</h3>
-            <p class="text-zinc-400 mb-8">Completa 1 tarea rápida (30 segundos) para acceder a todas las apps durante 30 minutos.</p>
-            
-            <!-- AQUÍ VA TU OFFERWALL (CPAlead) -->
-            <div id="offerwallContainer" class="mb-8 min-h-[420px] bg-zinc-800 rounded-2xl flex items-center justify-center">
-                <p class="text-zinc-400 text-sm">Cargando tareas...</p>
-            </div>
+        <main id="top">
+            <section id="landingView" class="landing-view">
+                <section class="intro-grid">
+                    <article class="hero-card hero-main">
+                        <p class="eyebrow">Biblioteca para iPhone</p>
+                        <h1>Descarga tus archivos IPA desde una biblioteca pensada para verse como app real en iPhone.</h1>
+                        <p class="hero-copy">
+                            <strong>DavidiOS Apps</strong> sera la entrada principal a tu coleccion: categorias, novedades
+                            y accesos rapidos para instalar lo que quieras desde una experiencia mas limpia y mas pro.
+                        </p>
 
-            <button onclick="completeTaskDemo()" 
-                    class="w-full bg-gradient-to-r from-violet-500 to-cyan-400 text-white py-4 rounded-3xl font-semibold text-lg">
-                Ya completé la tarea
-            </button>
-            
-            <p onclick="closeModal()" class="text-zinc-500 text-xs mt-6 cursor-pointer">O cierra y vuelve más tarde</p>
-        </div>
+                        <div class="hero-actions">
+                            <button id="previewLibraryButton" class="secondary-action" type="button">Ver preview de la app</button>
+                        </div>
+
+                        <div class="hero-badges">
+                            <span>Solo para iPhone</span>
+                            <span>Descargas IPA</span>
+                            <span>Interfaz tipo biblioteca privada</span>
+                        </div>
+                    </article>
+
+                    <article class="hero-card showcase-card">
+                        <div class="showcase-copy">
+                            <p class="panel-label">Vista que vas a reemplazar</p>
+                            <h2>Asi se vera cuando ya este agregada a la pantalla de inicio.</h2>
+                            <p>
+                                Aqui luego pondremos tu captura real tomada desde la app ya instalada. Por ahora te dejo el espacio listo.
+                            </p>
+                        </div>
+
+                        <div class="showcase-shot">
+                            <img class="showcase-image" src="Safari.png" alt="Vista previa vertical temporal de DavidiOS Apps">
+                        </div>
+                    </article>
+                </section>
+
+                <section class="install-flow-card">
+                    <div class="install-flow-header">
+                        <p class="eyebrow">Acceso rapido</p>
+                        <h2>Agrega DavidiOS Apps a tu pantalla de inicio</h2>
+                        <p id="installStateText" class="hero-copy">
+                            Esta parte sera tu pantalla de instrucciones principal. La idea es que primero entiendan que esto es una biblioteca de apps para iPhone y luego vean exactamente como entrar.
+                        </p>
+                    </div>
+
+                    <div class="install-flow-grid">
+                        <article class="install-list-card">
+                            <p class="panel-label">Pasos</p>
+                            <div id="installStateTitle" class="install-state-pill">Hazlo desde Safari para iPhone</div>
+
+                            <ul class="install-steps">
+                                <li>
+                                    <div class="step-visual">
+                                        <img src="Safari.png" alt="Abrir la pagina en Safari">
+                                    </div>
+                                    <div class="step-body">
+                                        <strong>Abre esta pagina en Safari</strong>
+                                        <p>No uses Chrome ni otros navegadores si quieres anadirla como app al inicio.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="step-visual">
+                                        <img src="sharebutton.png" alt="Icono compartir de iPhone">
+                                    </div>
+                                    <div class="step-body">
+                                        <strong>Toca el boton Compartir</strong>
+                                        <p>Busca el icono de compartir de iPhone y tocalo para abrir las acciones del navegador.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="step-visual">
+                                        <img src="addhome.png" alt="Opcion anadir a pantalla de inicio">
+                                    </div>
+                                    <div class="step-body">
+                                        <strong>Elige "Anadir a pantalla de inicio"</strong>
+                                        <p>El nombre sugerido sera <strong>DavidiOS Apps</strong> para que se vea bien en el home screen.</p>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+            </section>
+
+            <section id="libraryView" class="library-view hidden">
+                <section class="library-hero">
+                    <div class="library-hero-copy">
+                        <p class="eyebrow">DavidiOS Apps</p>
+                        <h2>Biblioteca de descargas IPA para iPhone.</h2>
+                        <p class="hero-copy">
+                            Elige una categoria, revisa el nombre de la app y descarga su archivo IPA desde esta biblioteca.
+                        </p>
+                    </div>
+
+                    <div class="library-summary">
+                        <article>
+                            <strong id="appCount">0</strong>
+                            <span>Apps disponibles</span>
+                        </article>
+                        <article>
+                            <strong id="categoryCount">0</strong>
+                            <span>Categorias activas</span>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="library-toolbar">
+                    <label class="search-shell" for="searchInput">
+                        <span>Buscar</span>
+                        <input id="searchInput" type="search" placeholder="Busca apps, juegos o utilidades IPA">
+                    </label>
+
+                    <button id="backToGuideButton" class="secondary-action" type="button">Ver guia de instalacion</button>
+                </section>
+
+                <section class="library-tabs-shell">
+                    <div class="library-tabs-head">
+                        <p class="panel-label">Categorias</p>
+                        <span class="library-tabs-hint">Selecciona una para filtrar</span>
+                    </div>
+                    <section id="categoryTabs" class="category-tabs" aria-label="Categorias"></section>
+                </section>
+
+                <section class="section-heading">
+                    <div>
+                        <p class="panel-label">Coleccion IPA</p>
+                        <h3 id="pageTitle">Todas las apps</h3>
+                    </div>
+                    <p id="resultsLabel" class="results-label">0 resultados</p>
+                </section>
+
+                <section id="appsGrid" class="apps-grid" aria-live="polite"></section>
+            </section>
+        </main>
     </div>
 
-    <script src="js/script.js"></script>
+    <template id="appCardTemplate">
+        <article class="app-card">
+            <div class="app-card-top">
+                <div class="app-icon"></div>
+                <span class="app-version"></span>
+            </div>
+            <div class="app-card-body">
+                <p class="app-category"></p>
+                <h4 class="app-name"></h4>
+                <p class="app-description"></p>
+                <div class="app-meta">
+                    <span class="app-size"></span>
+                    <span class="app-signer"></span>
+                </div>
+            </div>
+            <div class="app-card-footer">
+                <span class="app-status"></span>
+                <a class="download-link" target="_blank" rel="noopener noreferrer">Descargar IPA</a>
+            </div>
+        </article>
+    </template>
+
+    <script src="script.js"></script>
 </body>
 </html>
