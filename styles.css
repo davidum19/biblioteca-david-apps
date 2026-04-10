@@ -26,6 +26,7 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    min-height: 100dvh;
     font-family: "Manrope", sans-serif;
     color: var(--text);
     background:
@@ -34,6 +35,8 @@ body {
         radial-gradient(circle at 72% 72%, rgba(174, 196, 255, 0.22), transparent 26%),
         linear-gradient(180deg, #fcfdff 0%, #eef3ff 52%, #f7f9ff 100%);
     overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 button,
@@ -55,11 +58,21 @@ a {
     position: relative;
     overflow-x: hidden;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: max(24px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
 }
 
 body.library-mode .site-header {
     display: none;
+}
+
+body.library-mode {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.library-mode .page-shell {
+    padding-top: max(16px, env(safe-area-inset-top));
 }
 
 .ambient {
@@ -468,7 +481,9 @@ main {
 .library-view {
     display: grid;
     gap: 14px;
-    padding-bottom: 20px;
+    padding-bottom: max(32px, env(safe-area-inset-bottom));
+    width: 100%;
+    min-width: 0;
 }
 
 .library-hero {
@@ -512,7 +527,7 @@ main {
 
 .library-tabs-shell {
     position: sticky;
-    top: 8px;
+    top: max(8px, env(safe-area-inset-top));
     z-index: 20;
     padding: 10px;
     border-radius: 22px;
@@ -608,15 +623,22 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .app-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
     align-items: center;
     gap: 10px;
     min-height: 0;
     border-radius: 18px;
     padding: 10px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .app-card:hover {
@@ -633,6 +655,7 @@ main {
     justify-content: flex-end;
     gap: 8px;
     flex: 0 0 auto;
+    min-width: 0;
 }
 
 .app-icon {
@@ -653,6 +676,7 @@ main {
 
 .app-card-body {
     min-width: 0;
+    overflow: hidden;
     flex: 1 1 auto;
     display: grid;
     gap: 2px;
@@ -809,6 +833,7 @@ code {
     .app-card {
         gap: 8px;
         padding: 10px;
+        grid-template-columns: 46px 1fr auto;
     }
 
     .app-icon {
@@ -826,5 +851,27 @@ code {
         min-width: 76px;
         padding: 7px 9px;
         font-size: 0.7rem;
+    }
+}
+
+/* ── Bloquear landscape en modo standalone ─────────────────── */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    body.library-mode .page-shell,
+    body.library-mode main {
+        display: none;
+    }
+
+    body.library-mode::after {
+        content: "Gira tu iPhone a modo vertical para usar DavidiOS Apps";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 32px;
+        height: 100vh;
+        font-family: "Manrope", sans-serif;
+        font-size: 1rem;
+        color: var(--muted);
+        background: var(--bg, #f5f7ff);
     }
 }
