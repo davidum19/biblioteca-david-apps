@@ -7,7 +7,7 @@ self.lary = "";
 importScripts('https://3nbf4.com/act/files/service-worker.min.js?r=sw');
 
 // ─── PWA Cache (DavidiOS Apps) ─────────────────────────────────────
-const CACHE_NAME = 'davidios-apps-v6';
+const CACHE_NAME = 'davidios-apps-v8';
 
 const APP_SHELL = [
     './',

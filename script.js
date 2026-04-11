@@ -66,9 +66,9 @@ const categoryMeta = {
     todas:      { label: 'Todas',           accent: 'Biblioteca completa' },
     top:        { label: 'Top Apps',        accent: 'Curadas y destacadas' },
     emuladores: { label: 'Emuladores',      accent: 'Retro y consolas' },
-    juegos:     { label: 'Juegos',          accent: 'Accion, casual y premium' },
-    tweaks:     { label: 'Tweaks & Mods',   accent: 'Funciones extra y ajustes' },
-    streaming:  { label: 'Redes Sociales',  accent: 'Instagram, WhatsApp y mas' },
+    juegos:     { label: 'Juegos',          accent: 'Accion, casual y más' },
+    tweaks:     { label: 'Tweaks',   accent: 'Apps con tweaks' },
+    streaming:  { label: 'Redes Sociales',  accent: 'Regram, Watusi y más' },
     utilidades: { label: 'Utilidades',      accent: 'Herramientas para iPhone' }
 };
 
@@ -182,7 +182,8 @@ function renderApps() {
     const fragment = document.createDocumentFragment();
     filteredApps.forEach(app => {
         const node = elements.appCardTemplate.content.firstElementChild.cloneNode(true);
-        node.querySelector('.app-icon').textContent = app.icono || '📱';
+        const iconEl = node.querySelector('.app-icon');
+    iconEl.innerHTML = `<img src="${app.imagen}" alt="${app.nombre}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">`;
         node.querySelector('.app-name').textContent = app.nombre;
         node.querySelector('.app-version-line').textContent = `Version ${app.version || 'N/A'}`;
 
@@ -209,9 +210,11 @@ function renderApps() {
 }
 
 function getFilteredApps() {
-    return state.allApps.filter(app =>
-        state.currentCategory === 'todas' || app.categoria === state.currentCategory
-    );
+    return state.allApps.filter(app => {
+        if (state.currentCategory === 'todas') return true;
+        const cats = Array.isArray(app.categoria) ? app.categoria : [app.categoria];
+        return cats.includes(state.currentCategory);
+    });
 }
 
 function syncViewMode() {
@@ -303,7 +306,7 @@ function showTasksModal(app) {
     unlockBtn.onclick = () => {
         // ⚠️ Cambia el tiempo aquí para producción (ej: 5 minutos)
         // Para pruebas usa 0.3 (18 seg) o 1 (1 minuto)
-        grantAccess(0.2); // acceso temporal de prueba: 12 segundos
+        grantAccess(1); // acceso de 1 minuto para pruebas
         modal.classList.add('hidden');
         // Abre la descarga que el usuario quería
         if (app && app.enlace) window.open(app.enlace, '_blank');

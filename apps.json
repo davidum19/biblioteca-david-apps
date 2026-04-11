@@ -1,120 +1,112 @@
 [
   {
     "id": 1,
-    "categoria": "top",
-    "nombre": "Delta Emulator",
+    "categoria": ["utilidades", "top"],
+    "nombre": "Live Container",
     "icono": "🎮",
-    "version": "1.3",
+    "imagen": "livecontainer.png",
+    "version": "3.7.2",
     "tamano": "92 MB",
-    "enlace": "https://ejemplo.com/delta.ipa"
+    "enlace": "https://github.com/LiveContainer/LiveContainer/releases"
   },
   {
     "id": 2,
-    "categoria": "top",
-    "nombre": "YouTube++",
+    "categoria": ["top", "tweaks"],
+    "nombre": "CapCut++",
     "icono": "📺",
-    "descripcion": "Reproductor mejorado con menos interrupciones y opciones extra.",
-    "version": "19.45",
+    "imagen": "cap.png",
+    "version": "13.9.2",
     "tamano": "148 MB",
-    "firma": "Pendiente de firma",
-    "estado": "Subida en revision",
-    "enlace": "#"
+    "enlace": "https://file.ipaomtk.com/ipa/CapCut-2-IPAOMTK.COM.ipa"
   },
   {
     "id": 3,
     "categoria": "emuladores",
-    "nombre": "GBA4iOS",
+    "nombre": "MeloNX",
     "icono": "🐸",
-    "descripcion": "Emulador clasico para Game Boy Advance con guardado rapido.",
-    "version": "2.1",
-    "tamano": "44 MB",
-    "firma": "Pendiente de firma",
-    "estado": "Disponible pronto",
-    "enlace": "#"
+    "imagen": "melo.png",
+    "version": "2.3.1",
+    "tamano": "11 MB",
+    "enlace": "https://git.ryujinx.app/melonx/emu/-/releases"
   },
   {
     "id": 4,
     "categoria": "juegos",
     "nombre": "GTA San Andreas",
     "icono": "🚗",
-    "descripcion": "Version completa para iPhone con acceso directo desde tu biblioteca.",
-    "version": "1.0",
-    "tamano": "1.9 GB",
-    "firma": "Verificar compatibilidad",
-    "estado": "Paquete en prueba",
-    "enlace": "#"
+    "imagen": "gta.jpg",
+    "version": "2.2.21",
+    "tamano": "1.5 GB",
+    "enlace": "https://file.ipaomtk.com/ipa/GTA-San-Andreas-ipaomtk.com.ipa"
   },
+  
   {
     "id": 5,
-    "categoria": "tweaks",
-    "nombre": "Spotify Premium++",
-    "icono": "🎵",
-    "descripcion": "Cliente modificado con experiencia extendida y descargas.",
-    "version": "9.1",
-    "tamano": "133 MB",
-    "firma": "Pendiente de firma",
-    "estado": "Disponible pronto",
-    "enlace": "#"
+    "categoria": "emuladores",
+    "nombre": "XeniOS",
+    "icono": "🕹️",
+    "imagen": "xen.png",
+    "version": "1.0.1",
+    "tamano": "12 MB",
+    "enlace": "https://github.com/xenios-jp/XeniOS/releases/"
   },
-  {
+{
     "id": 6,
-    "categoria": "streaming",
-    "nombre": "Netflix Ultra HD",
-    "icono": "📽️",
-    "descripcion": "Build experimental para contenido de video con perfil visual premium.",
-    "version": "8.9",
-    "tamano": "201 MB",
-    "firma": "En pruebas",
-    "estado": "Revision interna",
-    "enlace": "#"
+    "categoria": "emuladores",
+    "nombre": "iPSX2",
+    "icono": "🕹️",
+    "imagen": "ipsx.png",
+    "version": "0.1.2",
+    "tamano": "12 MB",
+    "enlace": "https://github.com/otti83/iPSX2/releases"
   },
+
   {
     "id": 7,
     "categoria": "utilidades",
     "nombre": "Esign",
     "icono": "📦",
-    "descripcion": "Firmador de IPA ligero para mantener tus instalaciones organizadas.",
-    "version": "1.2",
-    "tamano": "57 MB",
-    "firma": "Herramienta recomendada",
-    "estado": "Actualizada hoy",
-    "enlace": "#"
+    "imagen": "esign.jpg",
+    "version": "2.0",
+    "tamano": "14 MB",
+    "enlace": "https://www.mediafire.com/file/aveuasvtkhpm8ya/esign.ipa/file"
   },
   {
     "id": 8,
     "categoria": "emuladores",
     "nombre": "PPSSPP",
     "icono": "🕹️",
-    "descripcion": "Emulador PSP optimizado para sesiones largas y mejor rendimiento.",
-    "version": "1.18",
-    "tamano": "69 MB",
-    "firma": "Pendiente de firma",
-    "estado": "Disponible pronto",
-    "enlace": "#"
+    "imagen": "psp.png",
+    "version": "1.20.2",
+    "tamano": "12 MB",
+    "enlace": "https://github.com/hrydgard/ppsspp/releases/download/v1.20.2/PPSSPP-iOS-v1.20.2.ipa"
   },
   {
     "id": 9,
     "categoria": "streaming",
-    "nombre": "Instagram++",
+    "nombre": "Instagram Regram",
     "icono": "📱",
-    "version": "424.1.0",
-    "tamano": "242.18 MB",
-    "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/10-04-2026/Instagram_424.1.0_Premium_%40thisismanpreets_apptesters.org.ipa"
+    "imagen": "instabb.png",
+    "version": "2.7",
+    "tamano": "285 MB",
+    "enlace": "https://fouadraheb.com/dl/storage/ipa/1773927232508-kwqvr/com.burbn.instagram_421.1.6_regram_2.7_sl.ipa"
   },
   {
     "id": 10,
-    "categoria": "streaming",
-    "nombre": "WhatsApp ++",
+    "categoria": ["streaming", "top"],
+    "nombre": "Watusi 3",
     "icono": "📱",
-    "version": "26.10.73",
-    "tamano": "130.71 MB",
-    "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/19-03-2026/WhatsApp_26.10.73_Premium_%40thisismanpreets_apptesters.org.ipa"
+    "imagen": "watusi.png",
+    "version": "1.3.6",
+    "tamano": "123 MB",
+    "enlace": "https://fouadraheb.com/dl/storage/ipa/1773475801109-uutvf/net.whatsapp.WhatsApp_26.9.75_watusi3_1.3.6_sl.ipa"
   },
   {
     "id": 11,
     "categoria": "streaming",
     "nombre": "YouTube OLED",
     "icono": "📱",
+    "imagen": "ytd.png",
     "version": "21.02.3",
     "tamano": "121.83 MB",
     "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/13-01-2026/YouTubeOLED_21.02.3_Premium_%40thisismanpreets_apptesters.org.ipa"
@@ -122,8 +114,9 @@
   {
     "id": 12,
     "categoria": "streaming",
-    "nombre": "Tik Tok ++",
+    "nombre": "TikTok++",
     "icono": "📱",
+    "imagen": "tik.png",
     "version": "44.6.0",
     "tamano": "395.59 MB",
     "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/31-03-2026/TikTok_44.5.0_Premium_%40thisismanpreets_apptesters.org.ipa"
@@ -131,10 +124,163 @@
   {
     "id": 13,
     "categoria": "streaming",
-    "nombre": "Facebook ++",
+    "nombre": "Facebook++",
     "icono": "📱",
+    "imagen": "face.png",
     "version": "555.0.0",
     "tamano": "170.64 MB",
     "enlace": "https://github.com/apptesters-org/AppTesters_Repo/releases/download/01-04-2026/Facebook_555.0.0_Premium_%40thisismanpreets_apptesters.org.ipa"
+  },
+  {
+    "id": 14,
+    "categoria": "juegos",
+    "nombre": "SpooferX",
+    "icono": "📍",
+    "imagen": "spoofer.png",
+    "version": "0.405.0",
+    "tamano": "130 MB",
+    "enlace": "https://www.spooferx.app/ipa/SpooferPro-0.405.0-0.649.ipa"
+  },
+  {
+    "id": 15,
+    "categoria": "juegos",
+    "nombre": "Subway Surfers++",
+    "icono": "🛹",
+    "imagen": " subway.png",
+    "version": "3.61.0",
+    "tamano": "189 MB",
+    "enlace": "https://file.ipaomtk.com/Subway-Surfers/Subway-Surfers-IPAOMTK.COM.ipa"
+  },
+  {
+    "id": 16,
+    "categoria": ["juegos", "top"],
+    "nombre": "iPogo",
+    "icono": "🎯",
+    "imagen": " ipogo-logo.png",
+    "version": "4.1.9",
+    "tamano": "115 MB",
+    "enlace": "https://ipogo.app/download/ipogo-4.1.9.ipa"
+  },
+  {
+    "id": 17,
+    "categoria": "juegos",
+    "nombre": "Minecraft",
+    "icono": "⛏️",
+    "imagen": "minecraft.png",
+    "version": "1.21.132",
+    "tamano": "586 MB",
+    "enlace": "https://file.ipaomtk.com/Minecraft/Minecraft-IPAOMTK.COM.ipa"
+  },
+  {
+    "id": 18,
+    "categoria": ["juegos", "top"],
+    "nombre": "Delta Executor",
+    "icono": "⚡",
+    "imagen": "delta.png",
+    "version": "2.714.1077",
+    "tamano": "130 MB",
+    "enlace": "https://www.mediafire.com/file/shl92ldukcfh7hp/Delta-2.714.1077.ipa/file"
+  },
+  {
+    "id": 19,
+    "categoria": "juegos",
+    "nombre": "Garena Free Fire MAX",
+    "icono": "🔥",
+    "imagen": "garena.png",
+    "version": "2.114.1",
+    "tamano": "403 MB",
+    "enlace": "https://file.ipaomtk.com/ipa/FREE_FIRE_MAX.ipa"
+  },
+  {
+    "id": 20,
+    "categoria": "juegos",
+    "nombre": "8 Ball Pool++",
+    "icono": "🎱",
+    "imagen": "8ballpool.png",
+    "version": "56.18.2",
+    "tamano": "105 MB",
+    "enlace": "https://file.ipaomtk.com/8-ball-pool-ipa/8ballpool-IPAOMTK.COM.ipa"
+  },
+  {
+    "id": 21,
+    "categoria": "streaming",
+    "nombre": "YouTube Music++",
+    "icono": "🎵",
+    "imagen": "ytm.png",
+    "version": "2.4.1",
+    "tamano": "95 MB",
+    "enlace": "https://www.mediafire.com/file/szy0diw4u7k1dt0/ytmu_9.11.2.ipa/file"
+  },
+  {
+    "id": 22,
+    "categoria": ["tweaks", "top"],
+    "nombre": "EeveeSpotify",
+    "icono": "💚",
+    "imagen": "eve.png",
+    "version": "6.5.0",
+    "tamano": "80 MB",
+    "enlace": "https://www.mediafire.com/folder/wh8ath2f3xdnj/Files"
+  },
+  {
+    "id": 23,
+    "categoria": "tweaks",
+    "nombre": "Movie Box Pro",
+    "icono": "🎬",
+    "imagen": "movie.png",
+    "version": "15.5",
+    "tamano": "48 MB",
+    "enlace": "https://www.movieboxpro.app/ipa"
+  },
+  {
+    "id": 24,
+    "categoria": "utilidades",
+    "nombre": "StikDebug",
+    "icono": "📦",
+    "imagen": "StikJIT.png",
+    "version": "3.1.1",
+    "tamano": "14 MB",
+    "enlace": "https://github.com/StephenDev0/StikDebug/releases"
+  },
+  {
+    "id": 25,
+    "categoria": "utilidades",
+    "nombre": "Scarlet",
+    "icono": "📦",
+    "imagen": "scarlet.jpg",
+    "version": "2.0",
+    "tamano": "14 MB",
+    "enlace": "https://www.mediafire.com/file/spnghetwo9fvt17/Scarlet.ipa/file"
+  },
+  {
+    "id": 26,
+    "categoria": "utilidades",
+    "nombre": "Filza Jailed",
+    "icono": "📦",
+    "imagen": "filza.png",
+    "version": "2.0",
+    "tamano": "14 MB",
+    "enlace": "https://github.com/34306/FilzaJailedDS/releases"
+  },
+  {
+    "id": 27,
+    "categoria": "utilidades",
+    "nombre": "Pancake Store",
+    "icono": "📦",
+    "imagen": "pancakestore.png",
+    "version": "1.1",
+    "tamano": "14 MB",
+    "enlace": "https://github.com/jailbreakdotparty/PancakeStore/releases"
+  },
+ {
+    "id": 28,
+    "categoria": ["top", "tweaks"],
+    "nombre": "Deezer++",
+    "icono": "📺",
+    "imagen": "dezer.png",
+    "version": "9.48.0",
+    "tamano": "148 MB",
+    "enlace": "https://file.ipaomtk.com/ipa/Deezer_Music_Player,_Podcast-v7.15.0-ipaomtk.com.ipa"
   }
+
+
 ]
