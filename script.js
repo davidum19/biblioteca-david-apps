@@ -312,7 +312,13 @@ function showTasksModal(app) {
         if (app && app.enlace) window.open(app.enlace, '_blank');
     };
 
-    closeBtn.onclick = () => modal.classList.add('hidden');
+    closeBtn.onclick = () => {
+    if (!adDone || !articleDone) {
+        alert("Completa las tareas para desbloquear las descargas 🔓");
+        return;
+    }
+    modal.classList.add('hidden');
+};
 
     modal.classList.remove('hidden');
 }
